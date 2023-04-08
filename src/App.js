@@ -8,7 +8,7 @@ import Banner from "./components/Banner";
 
 function App() {
   return (
-    <div className="bg-site bg-cover bg-no-repeat">
+    <div className="bg-site bg-cover bg-no-repeat overflow-hidden">
       <Header/>
       <Banner/>
      <Navbar/>
