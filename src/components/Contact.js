@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from '@emailjs/browser';
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_tqupoy6', 'template_khmwjfc', form.current, 'avFEcr2F3RYtZDx1_')
+      .then((result) => {
+          console.log(result.text);
+          e.target.reset();
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
   return (
     <section className="py-16 lg:section" id="contact">
       <div className="container mx-auto">
@@ -23,26 +37,29 @@ function Contact() {
               </h2>
             </div>
           </motion.div>
-          <motion.form variants={fadeIn("right", 0.3)}
+          <motion.form ref={form} onSubmit={sendEmail} variants={fadeIn("right", 0.3)}
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
             className="flex-1 border rounded-2xl flex flex-col gap-y-6 pb-24 p-6 items-start">
             <input
               type="text"
+              name="from_name"
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               placeholder="Your name"
             />
             <input
-              type="text"
+              type="email"
+              name="from_email"
               className="bg-transparent border-b py-3 outline-none w-full placeholder:text-white focus:border-accent transition-all"
               placeholder="Your email"
             />
             <textarea
               className="bg-transparent border-b py-12 outline-none w-full placeholder:text-white focus:border-accent transition-all resize-none mb-12"
               placeholder="Your message"
+              name="message"
             ></textarea>
-            <button className="btn btn-lg">Send message</button>
+            <input className="btn btn-lg" type="submit" value="Send message" />
           </motion.form>
         </div>
       </div>

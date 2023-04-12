@@ -22,11 +22,9 @@ export default function Work() {
                 My latest <br /> Work
               </h2>
               <p className="max-w-sm mb-16">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                quam facere et voluptatum. A nesciunt vero perspiciatis aperiam
-                mollitia eius.z
+              I'm a Front-end Developer, a Youtuer and a Designer. I have created so many projectes and have many satisfied clients.
               </p>
-              <button className="btn btn-sm">View all projects</button>
+              <a href="https://github.com/ElipseCode" target="_blank" rel="noreferrer"><button className="btn btn-sm">View all projects</button></a>
             </div>
             <div className="group relative overflow-hidden border-2 border-white/50 rounded-xl">
               <div className="group-hover:bg-black/70 w-full h-full absolute z-40 transition-all duration-300"></div>

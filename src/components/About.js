@@ -3,6 +3,8 @@ import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
+import { Link } from "react-scroll";
+
 function About() {
   const [ref, InView] = useInView({
     threshold: 0.5,
@@ -31,14 +33,12 @@ function About() {
               experience.
             </h3>
             <p className="mb-6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vel
-              ad vitae, numquam officiis earum aut voluptatem exercitationem
-              consectetur sapiente?
+            I'm a Freelancer, Designer and a Front-end Developer. I have created so many projectes and have many satisfied clients. Although i am still learning and improving my skills on daily basis.
             </p>
             <div className="flex gap-x-6 lg:gap-x-10 mb-12">
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {InView ? <CountUp start={0} end={13} duration={3} /> : null}
+                  {InView ? <CountUp start={0} end={3} duration={3} /> : null}
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">
                   Year of <br />
@@ -47,7 +47,7 @@ function About() {
               </div>
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {InView ? <CountUp start={0} end={13} duration={3} /> : null}
+                  {InView ? <CountUp start={0} end={2} duration={3} /> : null}
                   k+
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">
@@ -57,8 +57,8 @@ function About() {
               </div>
               <div>
                 <div className="text-[40px] font-tertiary text-gradient mb-2">
-                  {InView ? <CountUp start={0} end={13} duration={3} /> : null}
-                  k+
+                  {InView ? <CountUp start={0} end={200} duration={3} /> : null}
+                  +
                 </div>
                 <div className="font-primary text-sm tracking-[2px]">
                   Satisfied <br />
@@ -67,10 +67,17 @@ function About() {
               </div>
             </div>
             <div className="flex gap-x-8 items-center">
-              <button className="btn btn-lg">Contact Me</button>
-              <a href="#" className="text-gradient btn-link">
+              <Link to="contact" smooth={true} spy={true}>
+                <button className="btn btn-lg">Contact Me</button>
+              </Link>
+              <Link
+                to="work"
+                smooth={true}
+                spy={true}
+                className="text-gradient btn-link"
+              >
                 My Portfolio
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

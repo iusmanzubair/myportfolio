@@ -13,6 +13,7 @@ export default function Navbar() {
             activeClass="active"
             smooth={true}
             spy={true}
+            offset={-200}
             className="cursor-pointer w-[60px] h-[60px] flex justify-center items-center"
           >
             <BiHomeAlt />

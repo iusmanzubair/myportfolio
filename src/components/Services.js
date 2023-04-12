@@ -6,22 +6,22 @@ import {fadeIn} from '../variants'
 const services = [
   {
     name: 'UI/UX Design',
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non quod eius exercitationem.",
+    description: "I am a UI/UX Designer with over many years of experience. Although i am still improving my skills.",
     link: 'Learn more'
   },
   {
     name: 'Development',
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non quod eius exercitationem.",
+    description: "I am a Front-end Developer with over many years of experience. Although i am still improving my skills.",
     link: 'Learn more'
   },
   {
     name: 'Digital Marketing',
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non quod eius exercitationem.",
+    description: "I am into Digital Marketing for many years. I work on my skills daily and improve them.",
     link: 'Learn more'
   },
   {
-    name: 'Product Branding',
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non quod eius exercitationem.",
+    name: 'Programming',
+    description: "I am a programmer with over many years of experience. Although i am still improving my skills.",
     link: 'Learn more'
   },
 ]
@@ -39,7 +39,7 @@ function Services() {
         className='flex-1 lg:bg-services lg:bg-bottom bg-no-repeat mix-blend-lighten mb-12 lg:mb-0'>
           <h2 className='h2 text-accent mb-6'>What I Do.</h2>
           <h3 className='h3 max-w-[455px] mb-16'>I'm a Freelancer Front-end Developer with over 2 years of experience.</h3>
-          <button className="btn btn-sm">See my work</button>
+          <a href='https://github.com/ElipseCode' target='_blank' rel="noreferrer"><button className="btn btn-sm">See my work</button></a>
         </motion.div>
         <motion.div
         variants={fadeIn('left', 0.5)}
@@ -56,8 +56,8 @@ function Services() {
                     <p className='font-secondary leading-tight'>{description}</p>
                   </div>
                   <div className='flex flex-col flex-1 items-end'>
-                    <a className='btn w-9 h-9 mb-[42px] flex justify-center items-center' href="#"><BsArrowUpRight/></a>
-                    <a href="#" className='text-gradient text-sm'>{link}</a>
+                    <a className='btn w-9 h-9 mb-[42px] flex justify-center items-center' href="https://github.com/ElipseCode" target='_blank' rel="noreferrer"><BsArrowUpRight/></a>
+                    <a href="https://github.com/ElipseCode" target='_blank' rel="noreferrer" className='text-gradient text-sm'>{link}</a>
                   </div>
                 </div>
             })}

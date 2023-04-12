@@ -2,13 +2,16 @@ import React from "react";
 // images
 import Image from "../assets/avatar.svg";
 // icons
-import { FaGithub, FaYoutube, FaDribbble } from "react-icons/fa";
+import { FaGithub, FaYoutube } from "react-icons/fa";
+import { TbBrandFiverr } from "react-icons/tb";
 // type animation
 import { TypeAnimation } from "react-type-animation";
 // motion
 import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "../variants";
+
+import { Link } from "react-scroll";
 
 const Banner = () => {
   return (
@@ -24,7 +27,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="text-[55px] font-bold leading-[0.8] lg:text-[110px]"
+              className="text-[55px] font-bold leading-[0.8] lg:text-[60px]"
             >
               USMAN <span>ZUBAIR</span>
             </motion.h1>
@@ -33,7 +36,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]"
+              className="mb-6 text-[36px] lg:text-[50px] font-secondary font-semibold uppercase leading-[1]"
             >
               <span className="text-white mr-4">I am a</span>
               <TypeAnimation
@@ -56,10 +59,9 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-8 max-w-lg mx-auto lg:mx-0"
+              className="mb-8 max-w-lg mx-auto lg:mx-0 text-2xl"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-              numquam. Harum deleniti id sapiente.
+              I'm a Freelancer Front-end Developer with over 2 years of experience.
             </motion.p>
             <motion.div
               variants={fadeIn("up", 0.6)}
@@ -68,10 +70,17 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <button className="btn btn-lg">Contact me</button>
-              <a href="#" className="text-gradient btn-link">
+              <Link to="contact" smooth={true} spy={true}>
+                <button className="btn btn-lg">Contact me</button>
+              </Link>
+              <Link
+                to="work"
+                smooth={true}
+                spy={true}
+                className="text-gradient btn-link"
+              >
                 My Portfolio
-              </a>
+              </Link>
             </motion.div>
             <motion.div
               variants={fadeIn("up", 0.7)}
@@ -80,14 +89,14 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
             >
-              <a href="#">
+              <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
                 <FaYoutube />
               </a>
-              <a href="#">
+              <a href="https://github.com/ElipseCode" target="_blank" rel="noreferrer">
                 <FaGithub />
               </a>
-              <a href="#">
-                <FaDribbble />
+              <a href="https://www.fiverr.com/" target="_blank" rel="noreferrer">
+                <TbBrandFiverr />
               </a>
             </motion.div>
           </div>
